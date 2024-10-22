@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的收藏夹</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>我的收藏夹</h1>
+        <div class="header-buttons">
+            <button id="addCategoryButton">添加分类</button>
+            <button id="addBookmarkButton">添加收藏</button>
+            <button id="showAllButton">显示全部</button>
+        </div>
+    </header>
+
+    <div class="add-category-form" id="addCategoryForm" style="display: none;">
+        <h2>添加分类</h2>
+        <label for="categoryName">分类名称:</label>
+        <input type="text" id="categoryName" required>
+        <button type="button" id="submitCategoryButton">提交分类</button>
+    </div>
+   
+    <div class="upload-form" id="uploadFormSection" style="display: none;">
+        <h2>添加收藏夹</h2>
+        <label for="bookmarkName">收藏夹名称:</label>
+        <input type="text" id="bookmarkName" required>
+
+        <label for="bookmarkURL">网址:</label>
+        <input type="url" id="bookmarkURL" required>
+
+        <label for="category">选择分类:</label>
+        <select id="category" required>
+            <option value="">选择分类</option>
+            <!-- 动态生成分类选项 -->
+        </select>
+
+        <label for="coverImage">上传封面:</label>
+        <input type="file" id="coverImage" accept="image/*" required>
+
+        <button type="button" id="submitBookmarkButton">提交</button>
+    </div>
+
+    <div class="bookshelf">
+        <h2>书架</h2>
+        <div id="categoryContainer" class="category-container">
+            <!-- 动态生成书签 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
